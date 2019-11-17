@@ -54,16 +54,16 @@ hooks:
   BeforeInstall:
     - location: react_stop.sh
       timeout: 300
-      runas: root
+      runas: ec2-user
 # During the AfterInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   AfterInstall:
     - location: afterinstall.sh
       timeout: 600
-      runas: root
+      runas: ec2-user
 # During the ApplicationStart deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   ApplicationStart:
     - location: react_start.sh
       timeout: 300
-      runas: root
+      runas: ec2-user
